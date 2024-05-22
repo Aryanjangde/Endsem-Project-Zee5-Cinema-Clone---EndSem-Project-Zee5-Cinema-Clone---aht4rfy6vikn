@@ -43,20 +43,20 @@ function CardDashboard({ _id, thumbnail, keywords }) {
           
           {isHovered && (
             <>
-            <div className="flex gap-2 p-4 flex-wrap justify-center">
+            <div className="flex gap-2 p-2 flex-wrap justify-center">
             {keywords.map((item, index) => (
               <span
                 key={index}
                 className={`${
                   isHovered ? "bg-white text-black" : "bg-gray-700 text-white"
-                } rounded-full px-3 py-1 text-sm transition-all duration-300 ease-in-out`}
+                } rounded-full px-2 py-1 text-sm transition-all duration-300 ease-in-out`}
               >
                 {item}
               </span>
             ))}
           </div>
             <button
-              className="bg-white text-black rounded-2xl px-5 py-3   mt-2 mb-2 border-2 border-blue-700 transition-colors duration-200 hover:bg-red-50"
+              className="bg-white text-black rounded-2xl px-4 py-2   mt-1 mb-1 border-2 border-blue-700 transition-colors duration-200 hover:bg-red-50"
               onClick={handleVideo}
             >
               Watch
