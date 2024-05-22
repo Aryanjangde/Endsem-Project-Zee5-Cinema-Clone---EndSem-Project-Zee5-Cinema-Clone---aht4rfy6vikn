@@ -112,6 +112,24 @@ export default function CarouselSpace() {
   }
   console.log(value.data);
 
+  const responsiveOptions = [
+    {
+      breakpoint: '1024px',
+      numVisible: 5,
+      numScroll: 2
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 3,
+      numScroll: 1
+    },
+    {
+      breakpoint: '560px',
+      numVisible: 1,
+      numScroll: 1
+    }
+  ];
+
   const options = [
     "movie",
     "tv show",
@@ -131,6 +149,7 @@ export default function CarouselSpace() {
           numVisible={5}
           numScroll={2}
           className="custom-carousel"
+          responsiveOptions={responsiveOptions}
           circular
           itemTemplate={CardDashboard}
         />
@@ -156,6 +175,7 @@ export default function CarouselSpace() {
           value={CategoryWise[curr] || []}
           numVisible={5}
           numScroll={2}
+          responsiveOptions={responsiveOptions}
           className="custom-carousel"
           circular
           itemTemplate={CardDashboard}
