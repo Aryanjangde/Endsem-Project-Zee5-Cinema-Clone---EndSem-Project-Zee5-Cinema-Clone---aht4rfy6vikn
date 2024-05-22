@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button"
 import { useContext } from "react";
 import { ApiContext } from "./contextFolder/Context";
@@ -11,8 +11,10 @@ export default function Navbar() {
   return (
     <div>
       <nav >
+        
         <div className="flex bg-black justify-between items-center  border-neutral-600 shadow-white rounded-sm">
         <div className="ml-1">
+        <Link to="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="96"
@@ -55,9 +57,11 @@ export default function Navbar() {
             />
           </g>
         </svg>
+        </Link>
         </div>
-        
+      
         <div>
+
         {localStorage.getItem("user") ? (<button className="text-black mr-10 bg-white rounded-xl p-3" onClick={()=>{
           localStorage.removeItem("user");
           nav("/login");

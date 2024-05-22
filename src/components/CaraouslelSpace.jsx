@@ -31,6 +31,7 @@ function CardDashboard({ _id, thumbnail, keywords }) {
             setVideo(data.data.video_url);
           });
       } else {
+        alert("Please log in first");
         nav("/login");
       }
     }
