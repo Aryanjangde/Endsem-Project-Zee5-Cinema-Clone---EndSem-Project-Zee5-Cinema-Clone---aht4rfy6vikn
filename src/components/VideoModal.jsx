@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-
-function VideoPlayer({ url }) {
+import { useParams } from 'react-router-dom';
+function VideoPlayer() {
+    const {video} = useParams();
   return (
     <div className="video-player-wrapper">
       <ReactPlayer
-        url={url}
+        url={video}
         className="react-player"
         playing
         controls

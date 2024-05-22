@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import Signup from "./components/SignUp";
 import Navbar from "./components/Navbar";
 import CarouselSpace from "./components/CaraouslelSpace";
+import VideoPlayer from "./components/VideoModal";
 
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 
@@ -27,6 +28,10 @@ function App() {
         {
           path:"/signup",
           element:<Signup/>
+        },
+        {
+          path:"/:video",
+          element:<VideoPlayer/>
         }
       ]
     }
