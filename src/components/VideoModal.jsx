@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player';
 import { useParams } from 'react-router-dom';
 function VideoPlayer() {
     const {video} = useParams();
+    console.log("use params", video)
   return (
     <div className="video-player-wrapper">
       <ReactPlayer

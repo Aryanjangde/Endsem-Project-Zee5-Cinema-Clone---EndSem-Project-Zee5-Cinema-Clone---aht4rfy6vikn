@@ -28,7 +28,7 @@ export default function Signup() {
     .then((response) => {
       console.log(response.data); 
       
-      alert("User Created");
+
       isSignedIn.setIsSignedIn(true);
       toLogin("/login");
     })

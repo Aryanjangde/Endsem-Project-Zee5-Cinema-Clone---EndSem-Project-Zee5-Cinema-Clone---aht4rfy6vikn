@@ -37,12 +37,15 @@ export default function CarouselSpace() {
   const CategoryWise = {};
   if (categoryList.length !== 0) {
     categoryList.forEach((item) => {
-      const List = value.data.filter((itm) => itm.type === item);
+
+      const List = value.data.filter(({type}) => type === item);
       CategoryWise[item] = List;
     });
   }
+  
+  
   console.log(value.data);
-
+  console.log(CategoryWise);
   
   const options = [
     "movie",
@@ -96,3 +99,6 @@ export default function CarouselSpace() {
     </div>
   );
 }
+
+
+

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import 'tailwindcss/tailwind.css'; /* Import Tailwind CSS */
+// import 'tailwindcss/tailwind.css'; /* Import Tailwind CSS */
 import { Link } from "react-router-dom";
 
 export default function Login() {
@@ -33,7 +33,7 @@ export default function Login() {
         alert("Login Successful");
       } else {
         setErrorMessage(data.message || "Login failed. Please try again.");
-        alert(data.message || "Login failed. Please try again.");
+
       }
     } catch (error) {
       console.error("Error:", error);
